@@ -5,7 +5,7 @@ let classBmarks = [45, 31, 53, 9, 77];
 let pass = 0;
 let fail = 0;
 
-function PrintMarks(marks) {
+function ClassifyStudents(marks) {
   const marksLen = marks.length;
   for (i = 0; i < marksLen; i++) {
     // let us assume that the moment we come across an undesirable value, we want to terminate the loop
@@ -28,4 +28,4 @@ function PrintMarks(marks) {
   console.log("total fail is " + fail);
 }
 
-PrintMarks(classAmarks);
+ClassifyStudents(classAmarks);

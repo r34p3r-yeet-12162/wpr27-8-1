@@ -33,3 +33,5 @@ classAmarks.forEach(function (val) {
 classAmarks.forEach(function Doobler(val) {
   console.log(val * 2);
 });
+
+// foreach does not return anything

@@ -10,7 +10,7 @@ function CleanData() {
   // pass by value VS pass by ref ...
 }
 
-function PrintMarks(marks) {
+function ClassifyStudents(marks) {
   const marksLen = marks.length;
   for (i = 0; i < marksLen; i++) {
     // let us assume that the moment we come across an undesirable value, we want to skip the current iteration of the loop
@@ -34,4 +34,4 @@ function PrintMarks(marks) {
   console.log("total fail is " + fail);
 }
 
-PrintMarks(classAmarks);
+ClassifyStudents(classAmarks);

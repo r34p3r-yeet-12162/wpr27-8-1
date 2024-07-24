@@ -46,7 +46,7 @@ let fail = 0;
 // functions allow us to reuse a block of statements by calling the name of the block
 
 // marks is a parameter. It will show how a future valus is gong to be used
-function PrintMarks(marks) {
+function ClassifyStudents(marks) {
   // start/ opening of block of statements
 
   for (i = 0; i < marks.length; i++) {
@@ -64,6 +64,6 @@ function PrintMarks(marks) {
   console.log("total fail is " + fail);
 } // end/ closing of block of statements
 
-PrintMarks(arrConstructor);
+ClassifyStudents(arrConstructor);
 // Class B
 //WhoPassed(classBmarks);

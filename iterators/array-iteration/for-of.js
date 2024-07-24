@@ -2,7 +2,7 @@
 let classAmarks = [23, 3, 73, 19, 57, 66, 78, 98, 1, 3];
 let classBmarks = [45, 31, 53, 9, 77];
 
-function PrintMarks(marks) {
+function ClassifyStudents(marks) {
   let pass = 0;
   let fail = 0;
   let position = 0;
@@ -24,4 +24,4 @@ function PrintMarks(marks) {
   console.log("total fail is " + fail);
 } // end/ closing of block of statements
 
-PrintMarks(classAmarks);
+ClassifyStudents(classAmarks);

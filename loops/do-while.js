@@ -7,7 +7,7 @@ let classBmarks = [45, 31, 53, 9, 77];
 let pass = 0;
 let fail = 0;
 
-function PrintMarks(marks) {
+function ClassifyStudents(marks) {
   const marksLen = marks.length;
 
   /* for (let i = 0; i < marksLen; i++) {
@@ -38,4 +38,4 @@ function PrintMarks(marks) {
   console.log("total fail is " + fail);
 } // end/ closing of block of statements
 
-PrintMarks(classAmarks);
+ClassifyStudents(classAmarks);
