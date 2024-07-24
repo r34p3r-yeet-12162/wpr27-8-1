@@ -1,3 +1,4 @@
+/* for loop */
 let classAmarks = [23, 3, 73, 19, 57, 66, 78, 98, 1, 3];
 let classBmarks = [45, 31, 53, 9, 77];
 
@@ -10,10 +11,17 @@ let fail = 0;
 // functions allow us to reuse a block of statements by calling the name of the block
 
 // marks is a parameter. It will show how a future valus is gong to be used
-function WhoPassed(marks) {
+function PrintMarks(marks) {
   // start/ opening of block of statements
 
-  for (i = 0; i < marks.length; i++) {
+  // step 1: initialise the counter variable
+  // step 2: the condition is checked
+  // step 3: if the condition is true, execute block of statements; if false then exit the loop
+  // step 4: modify the counter variable
+
+  const marksLen = marks.length;
+
+  for (i = 0; i < marksLen; i++) {
     if (marks[i] > 59) {
       console.log(" pass " + marks[i]);
       pass++;
@@ -28,6 +36,6 @@ function WhoPassed(marks) {
   console.log("total fail is " + fail);
 } // end/ closing of block of statements
 
-WhoPassed(classAmarks);
+PrintMarks(classAmarks);
 // Class B
-WhoPassed(classBmarks);
+PrintMarks(classBmarks);
