@@ -1,0 +1,119 @@
+<!-- The entire application in the browser is identified as window -->
+
+<!-- The document begins here -->
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Form</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <style>
+      :root {
+        --main-colour: "black";
+        --secondary-colour: "white";
+      }
+
+      * {
+        color: var(--main-colour);
+        padding: 0;
+        margin: 0;
+        border-collapse: collapse;
+        box-sizing: border-box;
+      }
+      form {
+        width: 80%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        padding: 2em;
+      }
+      form ol {
+        list-style: none;
+      }
+      form label {
+        display: inline-block;
+        width: 200px;
+        margin: 0.2em;
+        text-align: right;
+      }
+      form input[type="text"],
+      input[type="password"] {
+        width: 200px;
+        border: none;
+        border-bottom: 1px solid black;
+        background-color: rgb(233, 227, 227);
+      }
+      .label {
+      }
+      .indicator {
+      }
+      .error-message {
+      }
+      form button {
+        width: 30%;
+        margin: auto;
+        padding: 1em 2em;
+        background-color: black;
+        color: whitesmoke;
+      }
+
+      .green-text {
+        font-style: italic;
+      }
+      .red-text {
+        font-style: italic;
+      }
+      .default-label {
+        font-style: italic;
+      }
+      .active-label {
+        font-style: normal;
+      }
+    </style>
+  </head>
+  <!-- The visible part of the page is controlled using the inbuilt DOCUMENT object.
+To interact with the document, there is an API in JS called DOM 
+-->
+  <body>
+    <!-- Elements have tag names, e.g,html, head, form,
+        ; elements also attributes. Attributes are key-value pairs like action="#"   -->
+    <form action="#" id="login-form">
+      <ol>
+        <li>
+          <label for="" class="label default-label">Username</label>
+          <input type="text" id="username" />
+          <label for="" class="indicator default-label">*</label>
+          <label for="" class="error-message default-label"></label>
+        </li>
+        <li>
+          <label for="" class="label">Password</label>
+          <input type="password" id="password" />
+          <label for="" class="indicator">*</label>
+          <label for="" class="error-message"></label>
+        </li>
+        <li>
+          <input type="submit" value="LOGIN" />
+        </li>
+        <p id="para">This is some text.</p>
+      </ol>
+
+      <button onclick="ChangeFormBg('red')">Change BG Colour</button>
+      <button onclick="LogDOMnodes()">Log DOM Nodes</button>
+      <button onclick="ChangeParagraphTest()">ChangeParagraphTest</button>
+      <button onclick="ChangeBtnBackgroundsByTagName()">
+        ChangeBtnBackgroundsByTagName
+      </button>
+      <button onclick="ChangeBtnBackgroundsByClassName()">
+        ChangeBtnBackgroundsByClassName
+      </button>
+      <button onclick="Login()">Log In</button>
+    </form>
+
+    <!--  -->
+    <script src="./index.js"></script>
+  </body>
+</html>
