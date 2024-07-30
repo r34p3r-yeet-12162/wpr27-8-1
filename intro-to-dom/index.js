@@ -69,4 +69,27 @@ function Login() {
   console.log(password);
 }
 
+function GetNameQrySelector() {
+  let usernameElement = document.querySelector("#username"); // The selector is qualified by preprending the symbol for ID, Class,etc
+  let username = usernameElement.value; // we do not always use value
+  console.log(username);
+}
+
+function ChangeBtnBackgroundsByClassNameQry() {
+  //let labels = document.querySelector(".default-label"); // Only the first elem
+  let labels = document.querySelectorAll(".default-label"); // An array
+  // console.log(buttons);
+  /*   buttons.forEach((button) => {
+    button.style.color = "orangered";
+  });
+ */
+  for (let i = 0; i < labels.length; i++) {
+    labels[i].style.backgroundColor = "orangered";
+  }
+}
+
+function SpecialSelection() {
+  let allTextInputs = document.querySelectorAll("form input[type='text']");
+}
+
 Greet();
