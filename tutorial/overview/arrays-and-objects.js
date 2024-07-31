@@ -45,4 +45,24 @@ personObj["name"]; // this also works
 // ... john: 23 is a property. The property name is 'john', and the property value is '23'
 // this means we do not use  anymore, we use a word
 
-let marksArrLiteralObj = [{ john: 23 }, { jane: 70 }, { jill: 90 }];
+// it is also possible to store objects in an array
+let marksArrLiteralObj = [
+  { mark: 23, studentName: "John" },
+  { mark: 70, studentName: "Jack" },
+  { mark: 70, studentName: "Jill" },
+];
+
+// Looping through array of objects
+/* for (let index = 0; index < marksArrLiteralObj.length; index++) {
+ console.log(marksArrLiteralObj[index])
+} */
+
+for (const item of marksArrLiteralObj) {
+  console.log(item.mark, item.studentName);
+}
+
+// Looping through array of numbers
+for (let index = 0; index < marksArrLiteral.length; index++) {
+  const item = marksArrLiteral[index];
+  console.log(item);
+}
