@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./index.js"></script>
+    <style>
+      form {
+        width: 55%;
+        margin: auto;
+        padding: 1em;
+        background-color: #948e8e;
+        color: black;
+        /*  */
+        display: flex;
+        flex-direction: column;
+      }
+      form > * {
+        padding: 0.2em;
+        width: 85%;
+        margin: auto;
+      }
+      form label {
+        display: inline-block;
+        width: 300px;
+      }
+      form input[type="text"] {
+        height: 2em;
+        padding: 2em;
+        border: 2px solid black;
+      }
+      form button {
+        width: 100%;
+        background-color: black;
+        color: white;
+        padding: 1em;
+      }
+      #recipe-title {
+        font-size: xx-large;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="">
+      <label for="recipe-name" id="recipe-title">Recipe Name</label>
+      <input type="text" id="recipe-name" placeholder="enter a recipe" />
+      <label for="recipe-error">*</label>
+      <button type="button" onclick="PrintRecipeToOutputParagraph()">
+        Add recipe
+      </button>
+      <hr />
+      <p id="output">No recipes</p>
+    </form>
+    <button type="button">CREATE FORM</button>
+  </body>
+</html>
