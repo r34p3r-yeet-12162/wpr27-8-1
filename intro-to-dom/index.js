@@ -18,7 +18,7 @@ function LogDOMnodes() {
 }
 
 function ChangeFormBg(color) {
-  let loginForm = document.getElementById("login-form"); // we are creating a varible to 'control' the item on the DOM
+  let loginForm = document.getElementById("login-form"); // we are creating a variable to 'control' the item on the DOM
   loginForm.style.backgroundColor = color;
   //
   // there is also an API that allows code from executing immediately
@@ -70,6 +70,16 @@ function Login() {
 }
 
 function GetNameQrySelector() {
+  // let someElement = document.getElementById('some-id')
+  //let someElement = document.querySelector('#some-id')
+
+  // let someElement = document.getElementsByClassName('username')
+  //let someBunchOfElements = document.querySelector(".some-class");
+
+  //let specialBunchOfElements = document.querySelector("form input[type='text']");
+
+  // WIth query selector, you can use forEach
+
   let usernameElement = document.querySelector("#username"); // The selector is qualified by preprending the symbol for ID, Class,etc
   let username = usernameElement.value; // we do not always use value
   console.log(username);

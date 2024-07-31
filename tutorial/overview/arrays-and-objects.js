@@ -47,9 +47,9 @@ personObj["name"]; // this also works
 
 // it is also possible to store objects in an array
 let marksArrLiteralObj = [
-  { mark: 23, studentName: "John" },
-  { mark: 70, studentName: "Jack" },
-  { mark: 70, studentName: "Jill" },
+  { mark: 23, studentName: "John", moduleName: "WPR151" },
+  { mark: 70, studentName: "Jack", moduleName: "WPR161" },
+  { mark: 70, studentName: "Jill", moduleName: "WPR171" },
 ];
 
 // Looping through array of objects
@@ -58,7 +58,7 @@ let marksArrLiteralObj = [
 } */
 
 for (const item of marksArrLiteralObj) {
-  console.log(item.mark, item.studentName);
+  console.log(`${item.studentName} : ${item.mark}`);
 }
 
 // Looping through array of numbers
