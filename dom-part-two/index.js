@@ -1,19 +1,27 @@
 /* Overview */
-function ReadInput() {
-  //
-  let recipeNameElem = document.querySelector("#recipe-name");
-  let recipeName = recipeNameElem.value;
-  //
-  //alert(recipeName);
+function ReadInput(inputId) {
   // error flag vaiable
   let error = false;
   //
+  let queriedID = `#${inputId}`;
+  //alert(queriedID);
+  let recipeNameElem = document.querySelector(queriedID);
+  let recipeName = recipeNameElem.value;
+  //
+  //
   recipeName = recipeName.trim(); // removes leading ans trailing white spaces
   //
+  //alert(recipeName);
   if (recipeName === "") {
     error = true;
     return;
   }
+  // what if there is an error?
+  if (error) {
+    alert("error");
+  }
+  document.getElementById(inputId).style.border = "2px solid red";
+
   //
   return recipeName;
 }
@@ -30,14 +38,16 @@ function PrintRecipeToOutputParagraph(recipe) {
 
 function AddRecipe() {
   // read input
-  const inputRecipe = ReadInput();
+  const inputRecipe = ReadInput("recipe-name");
+  alert(inputRecipe);
 
-  if (inputRecipe) {
-    // print recipe on page
-    PrintRecipeToOutputParagraph(inputRecipe);
-    return true;
-  }
-  return false;
+  // guard clauses
+  /* if (!inputRecipe)
+    // if indeed we have a recipe. skip next line
+    return false;
+  return PrintRecipeToOutputParagraph(inputRecipe); // look at this line
+ */
+  return !inputRecipe ? false : PrintRecipeToOutputParagraph(inputRecipe);
 }
 
 //console.log(ReadInput());
