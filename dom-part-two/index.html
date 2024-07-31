@@ -39,17 +39,27 @@
       #recipe-title {
         font-size: xx-large;
       }
+      .error {
+        display: inline-block;
+        width: 10px;
+        color: #7a1414;
+      }
+      .no-error {
+        color: "green";
+      }
     </style>
   </head>
   <body>
-    <form action="">
+    <!--  <form>
       <label for="recipe-name" id="recipe-title">Recipe Name</label>
       <input type="text" id="recipe-name" placeholder="enter a recipe" />
-      <label for="recipe-name-error">*</label>
-      <button type="button" onclick="AddRecipe()">Add recipe</button>
+      <label for="recipe-name-error" class="error">*</label>
+      <button type="button" onclick="AddRecipe()" id="recipe-name-error">
+        Add recipe
+      </button>
       <hr />
       <p id="output">No recipes</p>
-    </form>
-    <button type="button">CREATE FORM</button>
+    </form> -->
+    <button type="button" onclick="CreateForm()">CREATE FORM</button>
   </body>
 </html>
