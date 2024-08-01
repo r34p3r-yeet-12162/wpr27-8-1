@@ -137,3 +137,97 @@ let drinks = ["wine"];
 //let food = fruits.concat(veggies)
 let food = fruits.concat(veggies, drinks);
 food;
+
+/* Week 2 */
+
+// comparing objects
+
+const obj1 = { foo: 1, bar: 2 };
+const obj2 = { foo: 1, bar: 2 };
+
+console.log(obj1 === obj2);
+
+//
+let obj3 = obj1; // obj3 is just obj1 with an alias
+obj1.foo = 5; // a change to obj3 also changes obj1
+console.log(obj3);
+
+console.log(obj1 == obj2); //false  objects are compared via reference, not via value
+console.log(obj3 === obj1);
+
+// 1. shallow copy: What is a shallow copy?
+let original = {
+  a: 1,
+  b: 2,
+  c: 3,
+  prop: {
+    d: {
+      foo: true,
+      bar: true,
+      baz: false,
+    },
+  },
+};
+let target = {};
+let copy = Object.assign(target, original); // we use .assign to create a shallow copy
+console.log(target);
+
+// 2. deep copy
+let original1 = {
+  a: 11,
+  b: 2,
+  c: 3,
+  prop: {
+    d: {
+      foo: true,
+      bar: true,
+      baz: false,
+    },
+  },
+};
+
+// we will convert the object to a string, then we  parse the result using json.parse()
+let copy1 = JSON.stringify(original1); // A deep copy is always applied using JSON methods
+console.log(copy1);
+copy1 = JSON.parse(copy1);
+
+console.log(copy1);
+copy1.a = true;
+//
+console.log(original1); // Changes to the copy do not affect the origal
+
+/* Spread and Rest */
+
+//1. rest
+
+function FindSum(a, b, c) {
+  // return a + b + c; This is a problem when you have variable number of arguments
+}
+
+function FindSumVariableArgs(...args) {
+  console.log(args);
+  // there is a way to 'collect' all arguments into an array
+  // args is now an array or arguments!
+  let sum = 0;
+
+  for (let num of args) {
+    sum = sum + num;
+  }
+  // sum += arg;
+
+  return sum;
+}
+
+console.log(FindSum(1, 2, 3));
+console.log(FindSumVariableArgs(9, 2, 1, 5, 6, 78, 5, 2, 2));
+
+//2. SPREAD
+
+function JoinArrays(arr1, arr2) {
+  return [...arr1, ...arr2];
+}
+console.log(JoinArrays([1, 2], [3, 4]));
+function ConvertArrays(arr1) {
+  return { ...arr1 };
+}
+console.log(ConvertArrays([1, 2, 3]));
