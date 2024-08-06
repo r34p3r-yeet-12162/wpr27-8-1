@@ -35,16 +35,11 @@ function readInput() {
   alert(inputVal);
 
   if (typeof inputVal === "number") {
-    console.log(inputVal);
     return inputVal;
   } else {
     return;
   }
 }
-
-// let inputVal = readInput(); //
-
-// let res = isNumber(inputVal);
 
 function findOddsandEvens(inputVal) {
   if (typeof inputVal !== "number") return `Provide a number.`;
@@ -55,14 +50,36 @@ function findOddsandEvens(inputVal) {
   else return `${inputVal} is odd`; //
 
   /* if(inputVal%2 === 0)
-  {
+    {
     console.log(`${inputVal} is even`);
-  }
-  else{
-    console.log(`${inputVal} is odd`);
+    }
+    else{
+        console.log(`${inputVal} is odd`);
+    
+    
+} */
+}
 
-
-  } */
+function determineIfInputNumberIsOddOrEven() {
+  // Step1: read input
+  let inputVal = readInput();
+  // Step 2: Check number
+  let isItNumber = isNumber(inputVal);
+  // Step 3: Check if odd or even
+  let output = findOddsandEvens(isItNumber);
+  //
+  console.log(output);
 }
 
 // console.log(findOddsandEvens(res));
+
+/* 
+
+    Call the functions in order. Remember
+    that some of the functions have been commented out
+ */
+
+function runCodeAsync() {
+  // a function that runs determineIfInputNumberIsOddOrEven after 3 seconds
+  // This is an intro
+}
