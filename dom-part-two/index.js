@@ -86,6 +86,12 @@ function CreateForm() {
     AddRecipe();
   });
 
+  //
+  btnAddrecipeElem.addEventListener("hover", () => {
+    document.body.style.backgroundColor = "orangered";
+  });
+  /* <button onclick ='AddRecipe()'> */
+
   // horizontal line
   let hrElem = document.createElement("hr");
 
@@ -105,4 +111,14 @@ function CreateForm() {
   formElement.appendChild(paragraphElem);
   //
   document.body.appendChild(formElement);
+}
+
+function testMouseEnter() {
+  document.body.style.backgroundColor = "red";
+}
+function testMouseLeave() {
+  document.body.style.backgroundColor = "blue";
+}
+function bodyLoading() {
+  alert("The body is loading ...");
 }

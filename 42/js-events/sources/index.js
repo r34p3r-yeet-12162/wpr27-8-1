@@ -1,3 +1,5 @@
+/* After the changes, the code is now broken.  */
+
 /* 
     Problem: We want to find odds and evens
 
@@ -37,7 +39,7 @@ function readInput() {
   if (typeof inputVal === "number") {
     return inputVal;
   } else {
-    return;
+    return; // undefined
   }
 }
 
@@ -61,14 +63,23 @@ function findOddsandEvens(inputVal) {
 }
 
 function determineIfInputNumberIsOddOrEven() {
-  // Step1: read input
-  let inputVal = readInput();
-  // Step 2: Check number
-  let isItNumber = isNumber(inputVal);
-  // Step 3: Check if odd or even
-  let output = findOddsandEvens(isItNumber);
+  let numberOfValues = prompt("How many values do you want to capture?");
+  //numberOfValues = Number(numberOfValues) // type constructor
+  //numberOfValues = numberOfValues*1 // multiplying by forces an implicit conversion
+  numberOfValues = parseInt(numberOfValues); // use a helper method called parse*
+
   //
-  console.log(output);
+  for (let i = 0; i < numberOfValues; i++) {
+    // Step1: read input
+    let inputVal = readInput(); // read input needs to be refactored.
+    // Step 2: Check number
+
+    let isItNumber = isNumber(inputVal);
+    // Step 3: Check if odd or even
+    let output = findOddsandEvens(isItNumber);
+    //
+    console.log(output);
+  }
 }
 
 // console.log(findOddsandEvens(res));

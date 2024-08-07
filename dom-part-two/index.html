@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script src="./index.js"></script>
+    <script src="./index.js" defer></script> <!--  defer means do not run any JS until all the page is ready  -->
     <style>
       form {
         width: 55%;
@@ -49,17 +49,21 @@
       }
     </style>
   </head>
-  <body>
+  <body onload="bodyLoading()">
     <!--  <form>
       <label for="recipe-name" id="recipe-title">Recipe Name</label>
       <input type="text" id="recipe-name" placeholder="enter a recipe" />
       <label for="recipe-name-error" class="error">*</label>
-      <button type="button" onclick="AddRecipe()" id="recipe-name-error">
+      <button type="button" onclick="AddRecipe()" onhover="func()" id="recipe-name-error">
         Add recipe
       </button>
       <hr />
       <p id="output">No recipes</p>
-    </form> -->
+    </form>  -->
     <button type="button" onclick="CreateForm()">CREATE FORM</button>
+    <p id="test" onmouseenter="testMouseEnter()" onmouseout="testMouseLeave()">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est dolor, quas
+      exercitationem neque eligendi delectus deleniti tempore quaerat enim sunt.
+    </p>
   </body>
 </html>
