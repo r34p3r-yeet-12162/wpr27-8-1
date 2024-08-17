@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Person Registration</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <div>
+      <h1>Register a Person</h1>
+      <form class="personForm">
+        <label for="name">Name:</label>
+        <input type="text" class="name" name="name" />
+
+        <label for="surname">Surname:</label>
+        <input type="text" class="surname" name="surname" />
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" />
+
+        <label for="gender">Gender:</label>
+        <select class="gender" name="gender">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+
+        <button type="submit">Add Person</button>
+      </form>
+
+      <button>Show Total People</button>
+      <button>Show Average Age</button>
+
+      <p id="totalPeople"></p>
+      <p id="averageAge"></p>
+      <button>Show Total Age by Gender</button>
+      <p id="totalAgeByGender"></p>
+    </div>
+  </body>
+</html>

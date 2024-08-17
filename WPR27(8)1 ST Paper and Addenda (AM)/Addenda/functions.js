@@ -1,0 +1,17 @@
+const people = [
+  { name: "John", surname: "Doe", age: 25, gender: "male" },
+  { name: "Jane", surname: "Smith", age: 30, gender: "female" },
+  { name: "Alice", surname: "Johnson", age: 22, gender: "female" },
+  { name: "Bob", surname: "Brown", age: 28, gender: "male" },
+  { name: "Charlie", surname: "Davis", age: 35, gender: "male" },
+  { name: "Emily", surname: "Wilson", age: 27, gender: "female" },
+  { name: "David", surname: "Garcia", age: 40, gender: "male" },
+  { name: "Sophia", surname: "Martinez", age: 19, gender: "female" },
+  { name: "Michael", surname: "Rodriguez", age: 32, gender: "male" },
+  { name: "Emma", surname: "Hernandez", age: 29, gender: "female" },
+  { name: "Olivia", surname: "Lopez", age: 24, gender: "female" },
+  { name: "Liam", surname: "Gonzalez", age: 31, gender: "male" },
+  { name: "Noah", surname: "Perez", age: 26, gender: "male" },
+  { name: "Mason", surname: "Sanchez", age: 23, gender: "male" },
+  { name: "Isabella", surname: "Clark", age: 21, gender: "female" },
+];
